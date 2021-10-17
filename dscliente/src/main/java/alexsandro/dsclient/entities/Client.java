@@ -1,4 +1,4 @@
-package alexsandro.dscliente.entities;
+package alexsandro.dsclient.entities;
 
 import java.io.Serializable;
 import java.time.Instant;
@@ -13,7 +13,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table
-public class Cliente implements Serializable{
+public class Client implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
 	@Id
@@ -28,11 +28,11 @@ public class Cliente implements Serializable{
 	
 	private Integer children;
 	
-	public Cliente() {
+	public Client() {
 		
 	}
 
-	public Cliente(Long id, String name, String cpf, Double income, Instant birthDate, Integer children) {
+	public Client(Long id, String name, String cpf, Double income, Instant birthDate, Integer children) {
 		this.id = id;
 		this.name = name;
 		this.cpf = cpf;
@@ -102,7 +102,7 @@ public class Cliente implements Serializable{
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Cliente other = (Cliente) obj;
+		Client other = (Client) obj;
 		return Objects.equals(id, other.id);
 	}
 }
